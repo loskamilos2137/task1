@@ -1,0 +1,42 @@
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$text-color-secondary: #666;
+$background-hover-light: #f5f5f5;
+$border-radius-strong: 8px;
+$spinner-height: 200px;
+$transition-speed: 0.2s;
+
+.container {
+  padding: $spacing-lg;
+  font-family: sans-serif;
+
+  .filter-input {
+    width: 100%;
+    margin-bottom: $spacing-md;
+  }
+
+  .spinner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: $spinner-height;
+    gap: $spacing-md;
+    color: $text-color-secondary;
+  }
+
+  .table-container {
+    border-radius: $border-radius-strong;
+    overflow: hidden;
+
+    .editable-cell {
+      cursor: pointer;
+      transition: background-color $transition-speed ease-in-out;
+      position: relative;
+
+      &:hover {
+        background-color: $background-hover-light;
+      }
+    }
+  }
+}
